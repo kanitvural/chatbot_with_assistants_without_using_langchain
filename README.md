@@ -1,25 +1,36 @@
 **.env contents**
 
+```
 OPENAI_API_KEY=
 
 AIRTABLE_API_KEY=
+```
 
 **CRM Template**
 
 https://airtable.com/apph7PZRJZdsP0Skw/shrHwajwaShy0IpjH
 
-**Server Commands**
+**AWS EC2 Setup**
 
-ssh root@IPADRESS
 
-sudo apt install python3-venv
+```
+ssh -i rag.pem ec2-user@ec2_ip
 
-python3 -m venv .venv
+sudo dnf update -y
+sudo dnf install git python3.11 python3.11-pip -y
 
-source .venv/bin/activate
+git clone https://github.com/kntvrl/chatbot_with_assistants_without_using_langchain.git
 
-pip3 install -r requirements.txt
+cd chatbot_with_assistants_without_using_langchain
+
+
+python3.11 -m venv venv
+
+source venv/bin/activate
+
+pip install -r requirements.txt
 
 nano .env
 
 nohup python3 main.py
+```
