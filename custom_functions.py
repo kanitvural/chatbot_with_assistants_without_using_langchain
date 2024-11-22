@@ -2,7 +2,7 @@ import json
 import requests
 import os
 from openai import OpenAI
-from assistant_insturctions import assistant_instructions
+from assistant_instructions import assistant_instructions
 from dotenv import load_dotenv, dotenv_values
 
 load_dotenv()
