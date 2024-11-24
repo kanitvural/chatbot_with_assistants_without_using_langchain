@@ -58,7 +58,7 @@ def create_assistant(client):
             model="gpt-3.5-turbo",
             tools=[
                 {
-                    "type": "file_search"  # This adds the knowledge base as a tool
+                    "type": "retrieval"  # This adds the knowledge base as a tool
                 },
                 {
                     "type": "function",  # This adds the lead capture as a tool
